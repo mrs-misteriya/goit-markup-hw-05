@@ -506,6 +506,36 @@ box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
+.project-list-img-wrapper{
+position: relative;
+overflow: hidden;
+}
+
+.overlay{
+position:absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+padding: 63px 24px;
+line-height: 1.56;
+font-size: 18px;
+letter-spacing: var(--brand-spacing);
+overflow: auto;
+
+background-color: rgba(33, 150, 243, 0.9);
+color: var(--second-text-color);
+
+transform: translateY(100%);
+transition: transform 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover .overlay,
+.project-link:focus .overlay{
+transform: translateY(0%);
+}
+
 .project-description{
 padding-top: 20px;
 padding-right: 24px;
