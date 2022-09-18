@@ -160,6 +160,10 @@ display: flex;
 padding-top: 32px;
 padding-bottom: 32px;
 align-items: center;
+
+color: var(--main-text-color);
+transition: color var(--transition-dur-and-func),
+text-shadow var(--transition-dur-and-func);
 }
 
 .mail{
@@ -182,19 +186,8 @@ margin-right: 10px;
 color: var(--color-button);
 }
 
-.nav-link{
-color: var(--main-text-color);
-transform: color var(--transition-dur-and-func),
-text-shadow var(--transition-dur-and-func);
-} 
-
 .list .auth-link{
 color:var(--main-color-link);
-}
-
-.auth-link{
-transform: color var(--transition-dur-and-func),
-text-shadow var(--transition-dur-and-func);
 }
 
 .nav-link:hover,
@@ -372,34 +365,34 @@ margin-right: 30px;
 position: relative;
 }
 
-.about-description-block{
+.about-img-block{
+display: flex;
+}
+
+.about-link:hover .about-img-block{
+box-shadow: var(--transition-main-shadow);
+}
+
+.about-description{
 position: absolute;
 bottom: 0;
 
 width: 100%;
 height: 70px;
-padding-top: 27px;
-padding-bottom: 27px;
 
+display: flex;
 background-color: rgba(47, 48, 58, 0.8);
 
-transition: box-shadow var(--transition-dur-and-func);
-}
-
-.about-link:hover .about-description-block{
-box-shadow: var(--transition-main-shadow);
-}
-
-
-.about-description{
 color: var(--second-text-color);
 text-transform: uppercase;
 font-size: var(--main-font-size);
-font-weight: var(----brand-weight);
+font-weight: var(--brand-weight);
 line-height: 1.14;
-text-align: center;
+
 align-items: center;
 justify-content: center;
+
+transition: box-shadow var(--transition-dur-and-func);
 }
 
 .list-team:not(:last-child){
@@ -468,7 +461,9 @@ border-radius: 50%;
 background-color: transparent;
 color: #AFB1B8;
 
-transition: box-shadow var(--transition-dur-and-func);
+transition: background-color var(--transition-dur-and-func),
+color var(--transition-dur-and-func),
+box-shadow var(--transition-dur-and-func);
 }
 
 .team-icon{
@@ -611,16 +606,12 @@ background-color: rgba(33, 150, 243, 0.9);
 color: var(--second-text-color);
 
 transform: translateY(100%);
-transition: transform 250ms linear;
+transition: transform var(--transition-dur-and-func);
 }
 
-.project-link:hover .overlay{
+.project-link:hover .overlay,
+.project-link:focus .overlay{
 transform: translateY(0%);
-}
-
-.project-link:hover .project-list-img-wrapper,
-.project-link:focus .project-list-img-wrapper{
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .project-description{
@@ -673,6 +664,7 @@ font-family: 'Oleo Script' Script;
 line-height: 1.71;
 letter-spacing: var(--brand-spacing);
 color: rgba(255, 255, 255, 0.6);
+transition: color var(--transition-dur-and-func);
 }
 
 .footer-address li:not(:last-child){
